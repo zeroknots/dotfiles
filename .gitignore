@@ -4,7 +4,10 @@
 .config/fish/fish_variables
 .config/fish/functions/fzf_key_bindings.fish
 .config/karabiner/
-.config/nvim/plugins
+.config/nvim/plugin
+.config/nvim/plugin
+.config/tmux/plugin
+.config/tmux/plugins
 .DS_Store
 .gnupg/trustdb.gpg
 .npmrc
