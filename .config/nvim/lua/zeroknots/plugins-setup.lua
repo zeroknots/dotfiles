@@ -35,6 +35,7 @@ return packer.startup(function(use)
 	use("rmehri01/onenord.nvim")
 	use("olimorris/onedarkpro.nvim")
 	use("cpea2506/one_monokai.nvim")
+	use("xiyaowong/transparent.nvim")
 
 	use("wbthomason/packer.nvim")
 	use("nvim-lua/plenary.nvim")
@@ -60,6 +61,9 @@ return packer.startup(function(use)
 			require("telescope").load_extension("lazygit")
 		end,
 	})
+
+	use("ThePrimeagen/git-worktree.nvim")
+	use("tpope/vim-fugitive")
 
 	use("hrsh7th/nvim-cmp")
 	use("hrsh7th/cmp-buffer")
@@ -96,6 +100,8 @@ return packer.startup(function(use)
 	use("nvim-treesitter/nvim-treesitter-context")
 
 	use("HiPhish/nvim-ts-rainbow2")
+
+	use("mbbill/undotree")
 
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")

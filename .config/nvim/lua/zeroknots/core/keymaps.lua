@@ -8,6 +8,16 @@ local keymap = vim.keymap
 keymap.set("i", "jk", "<ESC>")
 keymap.set("n", "<leader>nh", ":nohl<CR>") -- no highlight
 
+-- Move the highlighted text up and down
+keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+-- Append line below to the current line, the cursor stays at the front
+keymap.set("n", "J", "mzJ`z")
+
+-- Half-page jumps, cursos stays in the center
+keymap.set("n", "<C-d>", "<C-d>zz")
+keymap.set("n", "<C-u>", "<C-u>zz")
+
 keymap.set("n", "x", '"_x')
 
 -- splits
@@ -36,10 +46,13 @@ vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 vim.keymap.set("n", "<leader>gb", builtin.git_branches, {})
 keymap.set("n", "<C-p>", ":Telescope git_files<CR>")
+
 -- git
 keymap.set("n", "<leader>gl", ":LazyGit<CR>")
 keymap.set("n", "gu", "<cmd>diffget //2<CR>") -- get the upper version of the diff
 keymap.set("n", "gh", "<cmd>diffget //3<CR>") -- get the lower version of the diff
+keymap.set("n", "<leader>gwc", ":Telescope git_worktree create_git_worktree <CR>") -- get the lower version of the diff
+keymap.set("n", "<leader>gww", ":Telescope git_worktree git_worktrees <CR>") -- get the lower version of the diff
 
 -- nvim-tree
 keymap.set("n", "<leader>fs", ":NvimTreeToggle<CR>")
@@ -64,6 +77,8 @@ keymap.set("n", "<leader>cf", ":!forge fmt<CR>")
 
 -- tree sitter
 keymap.set("n", "<leader>ts", ":TSEnable highlight<CR>")
+
+keymap.set("n", "<leader>u", ":UndotreeToggle<CR>")
 
 local wk = require("which-key")
 
@@ -104,5 +119,11 @@ wk.register({
 		name = "harpoon",
 		a = "add file",
 		h = "harpoon menu",
+	},
+
+	g = {
+		name = "git",
+		l = "LazyGit",
+		w = "worktree",
 	},
 }, { prefix = "<leader>" })

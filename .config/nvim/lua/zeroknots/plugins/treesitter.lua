@@ -19,6 +19,7 @@ treesitter.setup({
 		"html",
 		"css",
 		"markdown",
+		"markdown_inline",
 		"bash",
 		"lua",
 		"vim",

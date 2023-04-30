@@ -19,6 +19,7 @@ mason_lspconfig.setup({
 	ensure_installed = {
 		"rust_analyzer",
 		"lua_ls",
+		"tsserver",
 	},
 })
 
@@ -27,5 +28,6 @@ mason_null_ls.setup({
 		"stylua",
 		"rustfmt",
 		"solhint",
+		"tsserver",
 	},
 })

@@ -52,7 +52,7 @@ opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 opt.undofile = true
 
 -- misc
-opt.guicursor = ""
+-- opt.guicursor = ""
 opt.isfname:append("@-@")
 opt.signcolumn = "yes"
 opt.updatetime = 50
