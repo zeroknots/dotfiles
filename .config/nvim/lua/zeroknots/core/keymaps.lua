@@ -46,6 +46,7 @@ vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 vim.keymap.set("n", "<leader>gb", builtin.git_branches, {})
 keymap.set("n", "<C-p>", ":Telescope git_files<CR>")
+keymap.set("n", "<leader>fc", ":Telescope command_palette<CR>")
 
 -- git
 keymap.set("n", "<leader>gl", ":LazyGit<CR>")

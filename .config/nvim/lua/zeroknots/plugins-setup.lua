@@ -103,6 +103,9 @@ return packer.startup(function(use)
 
 	use("mbbill/undotree")
 
+	use({ "nvim-telescope/telescope.nvim" })
+	use({ "LinArcX/telescope-command-palette.nvim" })
+
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
 
