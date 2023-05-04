@@ -14,4 +14,15 @@ saga.setup({
 	definition_action_keys = {
 		edit = "<CR>",
 	},
+	finder = {
+		keys = {
+			close_in_preview = "<ESC>",
+		},
+	},
+	definition = {
+		quit = "<ESC>",
+	},
+	rename = {
+		quit = "<ESC>",
+	},
 })
