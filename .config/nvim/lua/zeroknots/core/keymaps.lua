@@ -29,6 +29,10 @@ keymap.set("n", "<leader>se", "<C-w>=")
 keymap.set("n", "<leader>sx", ":close<CR>")
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 
+-- jumps
+keymap.set("n", "[j", "<C-o>")
+keymap.set("n", "]j", "<C-i>")
+
 -- terminal
 keymap.set("n", "<leader>tt", ":ToggleTerm<CR>")
 
@@ -45,6 +49,7 @@ vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 vim.keymap.set("n", "<leader>gb", builtin.git_branches, {})
+vim.keymap.set("n", "<leader>/", builtin.current_buffer_fuzzy_find, {})
 keymap.set("n", "<C-p>", ":Telescope git_files<CR>")
 keymap.set("n", "<leader>fc", ":Telescope command_palette<CR>")
 

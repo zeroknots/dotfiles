@@ -31,7 +31,7 @@ local on_attach = function(client, bufnr)
 end
 
 -- enable autocompletion
-local capabilities = cmp_nvim_lsp.default_capabilities()
+-- local capabilities = cmp_nvim_lsp.default_capabilities()
 
 lspconfig["rust_analyzer"].setup({
 	server = {
@@ -50,10 +50,10 @@ lspconfig["solidity"].setup({
 				["forge-std/"] = "lib/forge-std/src/",
 				["@openzeppelin/"] = "lib/openzeppelin-contracts/",
 				["openzeppelin-contracts/"] = "lib/openzeppelin-contracts/",
-				["solady"] = "lib/solady/src/",
-				["solmate"] = "lib/solmate/src/",
-				["zodiac"] = "lib/zodiac/contracts/",
-				["safe-tools"] = "lib/safe-tools/src/",
+				["solady/"] = "lib/solady/src/",
+				["solmate/"] = "lib/solmate/src/",
+				["zodiac/"] = "lib/zodiac/contracts/",
+				["safe-tools/"] = "lib/safe-tools/src/",
 			},
 		},
 	},

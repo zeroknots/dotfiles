@@ -150,6 +150,11 @@ _G.packer_plugins = {
     path = "/Users/ops/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
     url = "https://github.com/kdheepak/lazygit.nvim"
   },
+  ["lsp-zero.nvim"] = {
+    loaded = true,
+    path = "/Users/ops/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
+    url = "https://github.com/VonHeikemen/lsp-zero.nvim"
+  },
   ["lspkind.nvim"] = {
     loaded = true,
     path = "/Users/ops/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
@@ -274,6 +279,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ops/.local/share/nvim/site/pack/packer/start/onenord.nvim",
     url = "https://github.com/rmehri01/onenord.nvim"
+  },
+  ["openingh.nvim"] = {
+    loaded = true,
+    path = "/Users/ops/.local/share/nvim/site/pack/packer/start/openingh.nvim",
+    url = "https://github.com/almo7aya/openingh.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,

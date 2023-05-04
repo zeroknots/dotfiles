@@ -61,6 +61,7 @@ return packer.startup(function(use)
 			require("telescope").load_extension("lazygit")
 		end,
 	})
+	use("almo7aya/openingh.nvim")
 
 	use("ThePrimeagen/git-worktree.nvim")
 	use("tpope/vim-fugitive")
@@ -76,6 +77,29 @@ return packer.startup(function(use)
 	-- managing & installing lsp servers
 	use("williamboman/mason.nvim")
 	use("williamboman/mason-lspconfig.nvim")
+
+	-- LSP Zero
+	use({
+		"VonHeikemen/lsp-zero.nvim",
+		branch = "v2.x",
+		requires = {
+			-- LSP Support
+			{ "neovim/nvim-lspconfig" }, -- Required
+			{
+				-- Optional
+				"williamboman/mason.nvim",
+				run = function()
+					pcall(vim.cmd, "MasonUpdate")
+				end,
+			},
+			{ "williamboman/mason-lspconfig.nvim" }, -- Optional
+
+			-- Autocompletion
+			{ "hrsh7th/nvim-cmp" }, -- Required
+			{ "hrsh7th/cmp-nvim-lsp" }, -- Required
+			{ "L3MON4D3/LuaSnip" }, -- Required
+		},
+	})
 
 	-- configuring lsp servers
 	use("neovim/nvim-lspconfig")
