@@ -32,6 +32,10 @@ return packer.startup(function(use)
 	use("marko-cerovac/material.nvim")
 	use("navarasu/onedark.nvim")
 	use("EdenEast/nightfox.nvim")
+	use({ "Everblush/nvim", as = "everblush" })
+	use("navarasu/onedark.nvim")
+	use("Mofiqul/dracula.nvim")
+
 	use("rmehri01/onenord.nvim")
 	use("olimorris/onedarkpro.nvim")
 	use("cpea2506/one_monokai.nvim")
@@ -65,6 +69,7 @@ return packer.startup(function(use)
 
 	use("ThePrimeagen/git-worktree.nvim")
 	use("tpope/vim-fugitive")
+	use("sindrets/diffview.nvim")
 
 	use("hrsh7th/nvim-cmp")
 	use("hrsh7th/cmp-buffer")
@@ -74,9 +79,13 @@ return packer.startup(function(use)
 	use("saadparwaiz1/cmp_luasnip")
 	use("rafamadriz/friendly-snippets")
 
+	use("xiyaowong/transparent.nvim")
+
 	-- managing & installing lsp servers
 	use("williamboman/mason.nvim")
 	use("williamboman/mason-lspconfig.nvim")
+	-- Pretty Diagnostics LSP lines
+	use({ "https://git.sr.ht/~whynothugo/lsp_lines.nvim" })
 
 	-- LSP Zero
 	use({
@@ -107,9 +116,44 @@ return packer.startup(function(use)
 	use({ "glepnir/lspsaga.nvim", branch = "main" })
 	use("onsails/lspkind.nvim")
 
+	-- lua with packer.nvim
+	use({
+		"max397574/better-escape.nvim",
+		config = function()
+			require("better_escape").setup()
+		end,
+	})
+
 	-- formatting & linting
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("jayp0521/mason-null-ls.nvim")
+
+	-- File Exploirer with lf
+	use({
+		"akinsho/toggleterm.nvim",
+		tag = "*",
+		config = function()
+			require("toggleterm").setup()
+		end,
+	})
+	use("nvim-lua/plenary.nvim")
+
+	use({
+		"lmburns/lf.nvim",
+		config = function()
+			-- This feature will not work if the plugin is lazy-loaded
+			vim.g.lf_netrw = 1
+
+			require("lf").setup({
+				escape_quit = false,
+				border = "rounded",
+				-- highlights = {FloatBorder = {guifg = require("kimbox.palette").colors.magenta}}
+			})
+
+			vim.keymap.set("n", "<C-o>", ":Lf<CR>")
+		end,
+		requires = { "plenary.nvim", "toggleterm.nvim" },
+	})
 
 	use({
 		"nvim-treesitter/nvim-treesitter",
@@ -150,6 +194,15 @@ return packer.startup(function(use)
 	})
 	use("ThePrimeagen/harpoon")
 
+	-- use({
+	-- 	"phaazon/hop.nvim",
+	-- 	branch = "v2", -- optional but strongly recommended
+	-- 	config = function()
+	-- 		-- you can configure Hop the way you like here; see :h hop-config
+	-- 		require("hop").setup({ keys = "etovwxeqdygfbhcksura" })
+	-- 	end,
+	-- })
+	--
 	use({
 		"phaazon/hop.nvim",
 		branch = "v2", -- optional but strongly recommended

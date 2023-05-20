@@ -9,6 +9,8 @@ local colors = {
   bg       = '#202328',
   fg       = '#bbc2cf',
   yellow   = '#ECBE7B',
+  innerbg = nil,
+  outerbg = "#16161D",
   cyan     = '#008080',
   darkblue = '#081633',
   green    = '#98be65',
@@ -155,27 +157,27 @@ ins_left({
 	end,
 })
 
-ins_left({
-	-- Lsp server name .
-	function()
-		local msg = "No Active Lsp"
-		local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
-		local clients = vim.lsp.get_active_clients()
-		if next(clients) == nil then
-			return msg
-		end
-		for _, client in ipairs(clients) do
-			local filetypes = client.config.filetypes
-			if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-				return client.name
-			end
-		end
-		return msg
-	end,
-	icon = " LSP:",
-	color = { fg = "#ffffff", gui = "bold" },
-})
-
+-- ins_left({
+-- 	-- Lsp server name .
+-- 	function()
+-- 		local msg = "No Active Lsp"
+-- 		local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
+-- 		local clients = vim.lsp.get_active_clients()
+-- 		if next(clients) == nil then
+-- 			return msg
+-- 		end
+-- 		for _, client in ipairs(clients) do
+-- 			local filetypes = client.config.filetypes
+-- 			if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
+-- 				return client.name
+-- 			end
+-- 		end
+-- 		return msg
+-- 	end,
+-- 	icon = " LSP:",
+-- 	color = { fg = "#ffffff", gui = "bold" },
+-- })
+--
 -- -- Add components to right sections
 -- ins_right({
 -- 	"o:encoding", -- option component same as &encoding in viml

@@ -5,6 +5,11 @@ end
 
 neotree.setup({
 
+	source_selector = {
+		winbar = false,
+		statusline = false,
+	},
+
 	enable_git_status = true,
 	default_component_configs = {
 		container = {

@@ -2,6 +2,7 @@ require("transparent").setup({
 	groups = { -- table: default groups
 		"Normal",
 		"NormalNC",
+		"NormalFloat",
 		"Comment",
 		"Constant",
 		"Special",

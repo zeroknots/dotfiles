@@ -19,11 +19,9 @@ telescope.setup({
 		},
 	},
 	extensions = {
-    command_palette = {
-      { "Open",
-        {"Open File in GitHub", ":OpenInGHFile"},
-      },
-      {
+		command_palette = {
+			{ "Open", { "Open File in GitHub", ":OpenInGHFile" } },
+			{
 				"File",
 				{ "entire selection (C-a)", ':call feedkeys("GVgg")' },
 				{ "save current file (C-s)", ":w" },
