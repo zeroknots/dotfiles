@@ -121,7 +121,7 @@ sketchybar --add item battery right \
 
 sketchybar --add item volume right \
     --set volume \
-    icon.color=0xff8aadf4 \
+    icon.color=0xff8aadf5 \
     label.drawing=true \
     script="$PLUGIN_SHARED_DIR/volume.sh" \
     --subscribe volume volume_change
@@ -132,3 +132,6 @@ sketchybar --add item volume right \
 ##### Finalizing Setup #####
 sketchybar --update
 sketchybar --trigger space_change
+
+yabai -m space --padding abs:40:10:10:10
+

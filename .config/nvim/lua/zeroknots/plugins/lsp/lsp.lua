@@ -26,6 +26,7 @@ lsp.configure("solidity", {
 				["safe-tools/"] = "lib/safe-tools/src/",
 				["@openzeppelin/"] = "lib/openzeppelin-contracts/",
 				["openzeppelin-contracts/"] = "lib/openzeppelin-contracts",
+				["hashi/"] = "lib/hashi/packages/evm/contracts/",
 			},
 		},
 	},

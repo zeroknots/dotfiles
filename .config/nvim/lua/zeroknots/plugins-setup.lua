@@ -39,6 +39,12 @@ return packer.startup(function(use)
 	use("rmehri01/onenord.nvim")
 	use("olimorris/onedarkpro.nvim")
 	use("cpea2506/one_monokai.nvim")
+	use({
+		"loctvl842/monokai-pro.nvim",
+		config = function()
+			require("monokai-pro").setup()
+		end,
+	})
 	use("xiyaowong/transparent.nvim")
 
 	use("wbthomason/packer.nvim")
@@ -110,6 +116,14 @@ return packer.startup(function(use)
 		},
 	})
 
+	use("sindrets/diffview.nvim")
+
+	use("axkirillov/hbac.nvim")
+
+	use({
+		"ray-x/lsp_signature.nvim",
+	})
+
 	-- configuring lsp servers
 	use("neovim/nvim-lspconfig")
 	use("hrsh7th/cmp-nvim-lsp")
@@ -156,10 +170,33 @@ return packer.startup(function(use)
 	})
 
 	use({
+		"utilyre/barbecue.nvim",
+		tag = "*",
+		requires = {
+			"SmiteshP/nvim-navic",
+			"nvim-tree/nvim-web-devicons", -- optional dependency
+		},
+		after = "nvim-web-devicons", -- keep this if you're using NvChad
+		config = function()
+			require("barbecue").setup()
+		end,
+	})
+
+	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = function()
 			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
 			ts_update()
+		end,
+	})
+
+	use({
+		"andythigpen/nvim-coverage",
+		requires = "nvim-lua/plenary.nvim",
+		-- Optional: needed for PHP when using the cobertura parser
+		rocks = { "lua-xmlreader" },
+		config = function()
+			require("coverage").setup()
 		end,
 	})
 

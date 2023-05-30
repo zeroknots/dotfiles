@@ -69,7 +69,7 @@ yabai -m space 5 --label "5: msg"
 yabai -m space 1 --display 2
 yabai -m space 2 --display 2
 
-yabai -m space --padding abs:40:10:10:10
+# yabai -m space --padding abs:40:10:10:10
 
 #yabai -m space chat --display 2
 #yabai -m space code --display 3

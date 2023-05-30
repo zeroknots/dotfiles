@@ -89,6 +89,14 @@ _G.packer_plugins = {
     path = "/Users/ops/.local/share/nvim/site/pack/packer/start/ReplaceWithRegister",
     url = "https://github.com/vim-scripts/ReplaceWithRegister"
   },
+  ["barbecue.nvim"] = {
+    config = { "\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rbarbecue\frequire\0" },
+    load_after = {},
+    loaded = true,
+    needs_bufread = false,
+    path = "/Users/ops/.local/share/nvim/site/pack/packer/opt/barbecue.nvim",
+    url = "https://github.com/utilyre/barbecue.nvim"
+  },
   ["better-escape.nvim"] = {
     config = { "\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18better_escape\frequire\0" },
     loaded = true,
@@ -155,6 +163,11 @@ _G.packer_plugins = {
     path = "/Users/ops/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
   },
+  ["hbac.nvim"] = {
+    loaded = true,
+    path = "/Users/ops/.local/share/nvim/site/pack/packer/start/hbac.nvim",
+    url = "https://github.com/axkirillov/hbac.nvim"
+  },
   ["hop.nvim"] = {
     config = { "\27LJ\2\nU\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\tkeys\28etovxqpdygfblzhckisuran\nsetup\bhop\frequire\0" },
     loaded = true,
@@ -172,7 +185,7 @@ _G.packer_plugins = {
     url = "https://github.com/kdheepak/lazygit.nvim"
   },
   ["lf.nvim"] = {
-    config = { "\27LJ\2\n©\1\0\0\5\0\f\0\0186\0\0\0009\0\1\0)\1\1\0=\1\2\0006\0\3\0'\2\4\0B\0\2\0029\0\5\0005\2\6\0B\0\2\0016\0\0\0009\0\a\0009\0\b\0'\2\t\0'\3\n\0'\4\v\0B\0\4\1K\0\1\0\f:Lf<CR>\n<C-o>\6n\bset\vkeymap\1\0\2\vborder\frounded\16escape_quit\1\nsetup\alf\frequire\rlf_netrw\6g\bvim\0" },
+    config = { "\27LJ\2\n©\1\0\0\5\0\f\0\0186\0\0\0009\0\1\0)\1\1\0=\1\2\0006\0\3\0'\2\4\0B\0\2\0029\0\5\0005\2\6\0B\0\2\0016\0\0\0009\0\a\0009\0\b\0'\2\t\0'\3\n\0'\4\v\0B\0\4\1K\0\1\0\f:Lf<CR>\n<C-o>\6n\bset\vkeymap\1\0\2\16escape_quit\1\vborder\frounded\nsetup\alf\frequire\rlf_netrw\6g\bvim\0" },
     loaded = true,
     path = "/Users/ops/.local/share/nvim/site/pack/packer/start/lf.nvim",
     url = "https://github.com/lmburns/lf.nvim"
@@ -186,6 +199,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ops/.local/share/nvim/site/pack/packer/start/lsp_lines.nvim",
     url = "https://git.sr.ht/~whynothugo/lsp_lines.nvim"
+  },
+  ["lsp_signature.nvim"] = {
+    loaded = true,
+    path = "/Users/ops/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
+    url = "https://github.com/ray-x/lsp_signature.nvim"
   },
   ["lspkind.nvim"] = {
     loaded = true,
@@ -222,6 +240,12 @@ _G.packer_plugins = {
     path = "/Users/ops/.local/share/nvim/site/pack/packer/start/material.nvim",
     url = "https://github.com/marko-cerovac/material.nvim"
   },
+  ["monokai-pro.nvim"] = {
+    config = { "\27LJ\2\n9\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\16monokai-pro\frequire\0" },
+    loaded = true,
+    path = "/Users/ops/.local/share/nvim/site/pack/packer/start/monokai-pro.nvim",
+    url = "https://github.com/loctvl842/monokai-pro.nvim"
+  },
   ["neo-tree.nvim"] = {
     loaded = true,
     path = "/Users/ops/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
@@ -252,10 +276,21 @@ _G.packer_plugins = {
     path = "/Users/ops/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-coverage"] = {
+    config = { "\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rcoverage\frequire\0" },
+    loaded = true,
+    path = "/Users/ops/.local/share/nvim/site/pack/packer/start/nvim-coverage",
+    url = "https://github.com/andythigpen/nvim-coverage"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/ops/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-navic"] = {
+    loaded = true,
+    path = "/Users/ops/.local/share/nvim/site/pack/packer/start/nvim-navic",
+    url = "https://github.com/SmiteshP/nvim-navic"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -418,6 +453,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: monokai-pro.nvim
+time([[Config for monokai-pro.nvim]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\16monokai-pro\frequire\0", "config", "monokai-pro.nvim")
+time([[Config for monokai-pro.nvim]], false)
 -- Config for: telescope.nvim
 time([[Config for telescope.nvim]], true)
 try_loadstring("\27LJ\2\nL\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\flazygit\19load_extension\14telescope\frequire\0", "config", "telescope.nvim")
@@ -430,18 +469,31 @@ time([[Config for toggleterm.nvim]], false)
 time([[Config for better-escape.nvim]], true)
 try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18better_escape\frequire\0", "config", "better-escape.nvim")
 time([[Config for better-escape.nvim]], false)
--- Config for: hop.nvim
-time([[Config for hop.nvim]], true)
-try_loadstring("\27LJ\2\nU\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\tkeys\28etovxqpdygfblzhckisuran\nsetup\bhop\frequire\0", "config", "hop.nvim")
-time([[Config for hop.nvim]], false)
 -- Config for: which-key.nvim
 time([[Config for which-key.nvim]], true)
 try_loadstring("\27LJ\2\nt\0\0\3\0\a\0\0156\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1,\1=\1\3\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\15timeoutlen\ftimeout\6o\bvim\0", "config", "which-key.nvim")
 time([[Config for which-key.nvim]], false)
+-- Config for: nvim-coverage
+time([[Config for nvim-coverage]], true)
+try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rcoverage\frequire\0", "config", "nvim-coverage")
+time([[Config for nvim-coverage]], false)
 -- Config for: lf.nvim
 time([[Config for lf.nvim]], true)
-try_loadstring("\27LJ\2\n©\1\0\0\5\0\f\0\0186\0\0\0009\0\1\0)\1\1\0=\1\2\0006\0\3\0'\2\4\0B\0\2\0029\0\5\0005\2\6\0B\0\2\0016\0\0\0009\0\a\0009\0\b\0'\2\t\0'\3\n\0'\4\v\0B\0\4\1K\0\1\0\f:Lf<CR>\n<C-o>\6n\bset\vkeymap\1\0\2\vborder\frounded\16escape_quit\1\nsetup\alf\frequire\rlf_netrw\6g\bvim\0", "config", "lf.nvim")
+try_loadstring("\27LJ\2\n©\1\0\0\5\0\f\0\0186\0\0\0009\0\1\0)\1\1\0=\1\2\0006\0\3\0'\2\4\0B\0\2\0029\0\5\0005\2\6\0B\0\2\0016\0\0\0009\0\a\0009\0\b\0'\2\t\0'\3\n\0'\4\v\0B\0\4\1K\0\1\0\f:Lf<CR>\n<C-o>\6n\bset\vkeymap\1\0\2\16escape_quit\1\vborder\frounded\nsetup\alf\frequire\rlf_netrw\6g\bvim\0", "config", "lf.nvim")
 time([[Config for lf.nvim]], false)
+-- Config for: hop.nvim
+time([[Config for hop.nvim]], true)
+try_loadstring("\27LJ\2\nU\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\tkeys\28etovxqpdygfblzhckisuran\nsetup\bhop\frequire\0", "config", "hop.nvim")
+time([[Config for hop.nvim]], false)
+-- Load plugins in order defined by `after`
+time([[Sequenced loading]], true)
+vim.cmd [[ packadd nvim-web-devicons ]]
+vim.cmd [[ packadd barbecue.nvim ]]
+
+-- Config for: barbecue.nvim
+try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rbarbecue\frequire\0", "config", "barbecue.nvim")
+
+time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

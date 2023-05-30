@@ -5,9 +5,6 @@ local keymap = vim.keymap
 
 -- general keymaps
 
-keymap.set("i", "jk", "<ESC>")
-keymap.set("n", "<leader>nh", ":nohl<CR>") -- no highlight
-
 -- Move the highlighted text up and down
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -59,6 +56,10 @@ keymap.set("n", "gu", "<cmd>diffget //2<CR>") -- get the upper version of the di
 keymap.set("n", "gh", "<cmd>diffget //3<CR>") -- get the lower version of the diff
 keymap.set("n", "<leader>gwc", ":Telescope git_worktree create_git_worktree <CR>") -- get the lower version of the diff
 keymap.set("n", "<leader>gww", ":Telescope git_worktree git_worktrees <CR>") -- get the lower version of the diff
+
+keymap.set("n", "]g", ":lua require('gitsigns').next_hunk()<CR>")
+keymap.set("n", "[g", ":lua require('gitsigns').prev_hunk()<CR>")
+keymap.set("n", "<leader>gs", ":lua require('gitsigns').stage_hunk()<CR>")
 
 -- nvim-tree
 keymap.set("n", "<leader>fs", ":NvimTreeToggle<CR>")
@@ -131,5 +132,7 @@ wk.register({
 		name = "git",
 		l = "LazyGit",
 		w = "worktree",
+		s = "stage hunk",
+		u = "undo stage hunk",
 	},
 }, { prefix = "<leader>" })
