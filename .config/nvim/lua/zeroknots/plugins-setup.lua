@@ -71,6 +71,16 @@ return packer.startup(function(use)
 			require("telescope").load_extension("lazygit")
 		end,
 	})
+
+	-- use({
+	-- 	"romgrk/kirby.nvim",
+	-- 	requires = {
+	-- 		{ "romgrk/fzy-lua-native", run = "make install" },
+	-- 		{ "romgrk/kui.nvim" },
+	-- 		{ "nvim-tree/nvim-web-devicons" },
+	-- 	},
+	-- })
+
 	use("almo7aya/openingh.nvim")
 
 	use("ThePrimeagen/git-worktree.nvim")
@@ -116,6 +126,12 @@ return packer.startup(function(use)
 		},
 	})
 
+	use({
+		"ellisonleao/glow.nvim",
+		config = function()
+			require("glow").setup()
+		end,
+	})
 	use("sindrets/diffview.nvim")
 
 	use("axkirillov/hbac.nvim")
@@ -215,6 +231,13 @@ return packer.startup(function(use)
 	use("windwp/nvim-ts-autotag")
 
 	use("lewis6991/gitsigns.nvim")
+	use({
+		"akinsho/git-conflict.nvim",
+		tag = "*",
+		config = function()
+			require("git-conflict").setup()
+		end,
+	})
 
 	use("RRethy/vim-illuminate")
 

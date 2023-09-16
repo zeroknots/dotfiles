@@ -70,6 +70,7 @@ keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if ne
 -- harpoon
 keymap.set("n", "<leader>ha", ':lua require("harpoon.mark").add_file()<CR>') -- add file to harpoon
 keymap.set("n", "<leader>hh", ":Telescope harpoon marks<CR>") -- show harpoon menu
+keymap.set("n", "<C-h>", ":Telescope harpoon marks<CR>") -- show harpoon
 -- Hop
 keymap.set("n", "<leader> ", ":HopWord<CR>") -- hop to word
 
