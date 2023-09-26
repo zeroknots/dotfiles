@@ -69,4 +69,4 @@ telescope.load_extension("fzf")
 
 telescope.load_extension("git_worktree")
 
-telescope.load_extension("command_palette")
+-- telescope.load_extension("command_palette")
