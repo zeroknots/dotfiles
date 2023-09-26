@@ -79,7 +79,20 @@ return packer.startup(function(use)
 	-- 		{ "romgrk/kui.nvim" },
 	-- 		{ "nvim-tree/nvim-web-devicons" },
 	-- 	},
-	-- })
+	-- }
+	--
+	--
+	use({ "folke/trouble.nvim" })
+	use("f-person/git-blame.nvim")
+
+	use("nvim-pack/nvim-spectre")
+
+	use({
+		"dnlhc/glance.nvim",
+	})
+	use({ "kevinhwang91/nvim-bqf" })
+
+	use("preservim/tagbar")
 
 	use("almo7aya/openingh.nvim")
 
@@ -174,12 +187,6 @@ return packer.startup(function(use)
 			-- This feature will not work if the plugin is lazy-loaded
 			vim.g.lf_netrw = 1
 
-			require("lf").setup({
-				escape_quit = false,
-				border = "rounded",
-				-- highlights = {FloatBorder = {guifg = require("kimbox.palette").colors.magenta}}
-			})
-
 			vim.keymap.set("n", "<C-o>", ":Lf<CR>")
 		end,
 		requires = { "plenary.nvim", "toggleterm.nvim" },
@@ -231,6 +238,17 @@ return packer.startup(function(use)
 	use("windwp/nvim-ts-autotag")
 
 	use("lewis6991/gitsigns.nvim")
+	use({
+		"pwntester/octo.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+			"nvim-tree/nvim-web-devicons",
+		},
+		config = function()
+			require("octo").setup()
+		end,
+	})
 	use({
 		"akinsho/git-conflict.nvim",
 		tag = "*",

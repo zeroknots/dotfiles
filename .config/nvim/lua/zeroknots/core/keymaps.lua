@@ -25,6 +25,8 @@ keymap.set("n", "<leader>-", "<C-w>s")
 keymap.set("n", "<leader>se", "<C-w>=")
 keymap.set("n", "<leader>sx", ":close<CR>")
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
+keymap.set("n", "<leader>ss", ":lua require('spectre').open()<CR>")
+keymap.set("n", "<leader>sw", ":lua require('spectre').open_visual({select_word=true})<CR>")
 
 -- jumps
 keymap.set("n", "[j", "<C-o>")
@@ -60,6 +62,15 @@ keymap.set("n", "<leader>gww", ":Telescope git_worktree git_worktrees <CR>") -- 
 keymap.set("n", "]g", ":lua require('gitsigns').next_hunk()<CR>")
 keymap.set("n", "[g", ":lua require('gitsigns').prev_hunk()<CR>")
 keymap.set("n", "<leader>gs", ":lua require('gitsigns').stage_hunk()<CR>")
+
+keymap.set("n", "<leader>gd", ":Glance definitions<CR>")
+keymap.set("n", "<leader>gr", ":Glance references<CR>")
+keymap.set("n", "<leader>gi", ":Glance implementations<CR>")
+keymap.set("n", "<leader>gt", ":Glance type_definitions<CR>")
+
+keymap.set("n", "<leader>dd", ":TroubleToggle<CR>")
+keymap.set("n", "<leader>ddw", ":TroubleToggle workspace_diagnostics<CR>")
+keymap.set("n", "<leader>ddf", ":TroubleToggle quickfix<CR>")
 
 -- nvim-tree
 keymap.set("n", "<leader>fs", ":NvimTreeToggle<CR>")

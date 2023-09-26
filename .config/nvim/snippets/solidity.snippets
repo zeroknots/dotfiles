@@ -16,6 +16,14 @@ snippet solFunction "sol function"
 		}
 
 
+snippet solpreamble "sol new preamble"
+	// SPDX-License-Identifier: MIT
+	pragma solidity 0.8.19;
+
+snippet import "sol import"
+	import {"${1:importName}"} from "${2:importPath}";
+
+
 snippet solcontract "sol new contract"
 	// SPDX-License-Identifier: MIT
 	pragma solidity ^0.8.19;
@@ -36,6 +44,16 @@ snippet solcontract "sol new contract"
 
 		}
 	}
+
+
+snippet forUnchecked "sol for loop"
+	for (uint256 i; i < ${1:count}; i = i.uncheckedInc()) {
+		${0}
+	}
+
+snippet commonImport "import common loop lib"
+	import {LoopLib} from "Common.sol/src/Common.sol";
+	using LoopLib for uint256;
 
 
 
