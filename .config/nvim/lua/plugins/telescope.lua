@@ -149,6 +149,23 @@ return {
 	keys = function()
 		return {
 			{ "<leader>*", "<cmd>Telescope grep_string<cr>", { silent = true, desc = "Grep Word Under Cursor" } },
+			{ "<leader>ff", "<cmd> Telescope find_files<cr>", { silent = true, desc = "Find Files" } },
+			{ "<leader>fg", "<cmd> Telescope live_grep<cr>", { silent = true, desc = "Telescope Live Grep" } },
+			{ "<leader>fh", "<cmd> Telescope help_tags<cr>", { silent = true, desc = "Telescope Help Tags" } },
+			{ "<leader>fb", "<cmd> Telescope buffers<cr>", { silent = true, desc = "Telescope buffers" } },
+			{ "<leader>gb", "<cmd> Telescope git_branches<cr>", { silent = true, desc = "Telescope git branches" } },
+			{
+				"<leader>/",
+				"<cmd> Telescope current_buffer_fuzzy_find<cr>",
+				{ silent = true, desc = "Telescope current buffer fuzzy find" },
+			},
+			{ "<C-p>", "<cmd> Telescope git_files<cr>", { silent = true, desc = "Telescope git files" } },
+			{
+				"<leader>fc",
+				"<cmd> Telescope command_palette<cr>",
+				{ silent = true, desc = "Telescope command_palette" },
+			},
+
 		}
 	end,
 }

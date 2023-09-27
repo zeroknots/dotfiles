@@ -8,8 +8,8 @@ vim.o.ls = 0
 vim.o.ch = 0
 
 -- line number
-opt.relativenumber = true
 opt.number = true
+opt.relativenumber = true
 
 -- tabs
 opt.tabstop = 2
