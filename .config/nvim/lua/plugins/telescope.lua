@@ -165,7 +165,6 @@ return {
 				"<cmd> Telescope command_palette<cr>",
 				{ silent = true, desc = "Telescope command_palette" },
 			},
-
 		}
 	end,
 }
