@@ -58,19 +58,19 @@ return {
 				font = "+4", -- (10% increase per step)
 			},
 		},
-		-- callback where you can add custom code when the Zen window opens
-		on_open = function()
-			require("noice").disable()
-			require("barbecue.ui").toggle(false)
-			vim.cmd("IndentBlanklineToggle")
-			vim.g.miniindentscope_disable = true
-		end,
-		-- callback where you can add custom code when the Zen window closes
-		on_close = function()
-			require("noice").enable()
-			require("barbecue.ui").toggle(true)
-			vim.cmd("IndentBlanklineToggle")
-			vim.g.miniindentscope_disable = false
-		end,
+		-- -- callback where you can add custom code when the Zen window opens
+		-- on_open = function()
+		-- 	require("noice").disable()
+		-- 	require("barbecue.ui").toggle(false)
+		-- 	vim.cmd("IndentBlanklineToggle")
+		-- 	vim.g.miniindentscope_disable = true
+		-- end,
+		-- -- callback where you can add custom code when the Zen window closes
+		-- on_close = function()
+		-- 	require("noice").enable()
+		-- 	require("barbecue.ui").toggle(true)
+		-- 	vim.cmd("IndentBlanklineToggle")
+		-- 	vim.g.miniindentscope_disable = false
+		-- end,
 	},
 }

@@ -33,12 +33,12 @@ end
 -- enable autocompletion
 -- local capabilities = cmp_nvim_lsp.default_capabilities()
 
-lspconfig["rust_analyzer"].setup({
-	server = {
-		capabilities = capabilities,
-		on_attach = on_attach,
-	},
-})
+-- lspconfig["rust_analyzer"].setup({
+-- 	server = {
+-- 		capabilities = capabilities,
+-- 		on_attach = on_attach,
+-- 	},
+-- })
 
 lspconfig["solidity"].setup({
 	capabilities = capabilities,

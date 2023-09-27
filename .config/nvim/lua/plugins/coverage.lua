@@ -1,4 +1,14 @@
-require("coverage").setup({
+return {
+
+	"andythigpen/nvim-coverage",
+
+  config = function(_,opts)
+    local plugin = require("coverage")
+    plugin.setup(opts)
+  end,
+
+  opts ={
+
 	commands = true, -- create commands
 	highlights = {
 		-- customize highlight groups created by the plugin
@@ -17,4 +27,6 @@ require("coverage").setup({
 	lang = {
 		-- customize language specific settings
 	},
-})
+
+  }
+}
