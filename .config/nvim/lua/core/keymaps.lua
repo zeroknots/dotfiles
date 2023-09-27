@@ -67,6 +67,7 @@ keymap.set("n", "<leader>rs", "<cmd>LspRestart<CR>") -- mapping to restart lsp i
 -- solidity dev env
 keymap.set("n", "<leader>fmt", ":!forge fmt<CR>")
 keymap.set("n", "<leader>cf", ":!forge fmt<CR>")
+-- keymap.set("n", "<leader> ", ":HopWord<CR>")
 
 -- tree sitter
 keymap.set("n", "<leader>ts", ":TSEnable highlight<CR>")
