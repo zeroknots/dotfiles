@@ -1,9 +1,18 @@
--- Defaults
-require("lf").setup({
-	winblend = 0,
-	highlights = { NormalFloat = { guibg = "NONE" } },
-	border = "double", -- border kind: single double shadow curved
-	height = 0.70,
-	width = 0.85,
-	escape_quit = true,
-})
+return {
+  "lmburns/lf.nvim",
+  cmd = "Lf",
+  dependencies = {
+    "akinsho/toggleterm.nvim",
+    "nvim-lua/plenary.nvim",
+  },
+  opts = {
+    border = "single",
+    escape_quit = true,
+    highlights = { NormalFloat = { guibg = "NONE" } },
+    winblend = 0,
+  },
+  keys = {
+    { "<leader>ff", "<cmd>Lf<cr>", desc = "Lf" },
+    { "<C-o>", "<cmd>Lf<cr>", desc = "Lf" },
+  },
+}

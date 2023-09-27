@@ -1,7 +1,7 @@
-local setup, comment = pcall(require, "Comment")
-
-if not setup then
-  return
-end
-
-comment.setup()
+return {
+	"numToStr/Comment.nvim",
+  config = function(_,opts)
+    local comment = require("Comment")
+    comment.setup()
+  end,
+}
