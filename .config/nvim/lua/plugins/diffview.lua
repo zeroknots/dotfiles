@@ -1,5 +1,6 @@
 return {
   "sindrets/diffview.nvim",
+  lazy = true,
   config = function(_,opts)
     local diffview = require("diffview")
       diffview.setup(opts)

@@ -1,5 +1,6 @@
 return {
   "lmburns/lf.nvim",
+  lazy = true,
   cmd = "Lf",
   dependencies = {
     "akinsho/toggleterm.nvim",

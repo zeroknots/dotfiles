@@ -1,6 +1,7 @@
 return {
 
 	"andythigpen/nvim-coverage",
+  lazy = true,
 
   config = function(_,opts)
     local plugin = require("coverage")
