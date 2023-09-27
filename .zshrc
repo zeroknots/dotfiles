@@ -20,9 +20,9 @@ fi
 #
 
 # Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
- source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
+# if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+#  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+# fi
 
 #eval "$(starship init zsh)"
 
@@ -118,6 +118,9 @@ eval "$(zoxide init zsh)"
 # bit
 export PATH="$PATH:/Users/ops/bin"
 export FZF_TMUX_OPTS="-p 55%,60%"
+
+
+eval "$(starship init zsh)"
 
 
 # bit end
