@@ -1,21 +1,22 @@
+local icons = require("core.icons")
 return {
 	"nvim-neo-tree/neo-tree.nvim",
 	dependencies = {
-			"nvim-lua/plenary.nvim",
-			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-			"MunifTanjim/nui.nvim",
+		"nvim-lua/plenary.nvim",
+		"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+		"MunifTanjim/nui.nvim",
 	},
 	config = function(_, opts)
 		local neotree = require("neo-tree")
 		neotree.setup(opts)
 	end,
-  lazy = false,
-	opts ={
+	lazy = false,
+	opts = {
 		source_selector = {
 			winbar = false,
 			statusline = false,
 		},
-	
+
 		enable_git_status = true,
 		default_component_configs = {
 			container = {
@@ -56,9 +57,9 @@ return {
 			git_status = {
 				symbols = {
 					-- Change type
-					added = "", -- or "✚", but this is redundant info if you use git_status_colors on the name
-					modified = "", -- or "", but this is redundant info if you use git_status_colors on the name
-					deleted = "✖", -- this can only be used in the git_status source
+					added = icons.git.added, -- or "✚", but this is redundant info if you use git_status_colors on the name
+					modified = icons.git.changed, -- or "", but this is redundant info if you use git_status_colors on the name
+					deleted = icons.git.deleted, -- this can only be used in the git_status source
 					renamed = "", -- this can only be used in the git_status source
 					-- Status type
 					untracked = "",
@@ -77,5 +78,5 @@ return {
 				nowait = true,
 			},
 		},
-	}
+	},
 }

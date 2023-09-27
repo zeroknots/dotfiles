@@ -1,6 +1,6 @@
+require("core.options")
 require("core.lazy")
 require("core.autostart")
-require("core.options")
 require("core.keymaps")
 require("core.colorscheme")
 -- require("core.lsp")
