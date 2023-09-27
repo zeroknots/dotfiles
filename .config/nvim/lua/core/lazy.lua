@@ -1,4 +1,3 @@
-
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -10,7 +9,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
-vim.opt.statuscolumn = "%s %l %C"
+-- vim.opt.statuscolumn = "%s %l %C"
 vim.cmd([[command! -nargs=0 GoToFile :Telescope find_files]])
 vim.cmd([[command! -nargs=0 GoToCommand :Telescope commands]])
 vim.cmd([[command! -nargs=0 Grep :Telescope live_grep]])
@@ -36,7 +35,7 @@ require("lazy").setup({
 		-- version = "*", -- try installing the latest stable version for plugins that support semver
 	},
 	-- cSpell:word tokyonight habamax
-	install = { colorscheme = {"sonokai" } },
+	install = { colorscheme = { "sonokai" } },
 	ui = {
 		border = "single",
 	},
