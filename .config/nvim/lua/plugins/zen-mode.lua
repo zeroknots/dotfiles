@@ -15,9 +15,9 @@ return {
 			-- by default, no options are changed for the Zen window
 			-- uncomment any of the options below, or add other vim.wo options you want to apply
 			options = {
-				signcolumn = "no", -- disable signcolumn
-				number = false, -- disable number column
-				relativenumber = false, -- disable relative numbers
+				signcolumn = "yes", -- disable signcolumn
+				number = true, -- disable number column
+				relativenumber = true, -- disable relative numbers
 				-- cursorline = false, -- disable cursorline
 				-- cursorcolumn = false, -- disable cursor column
 				-- foldcolumn = "0", -- disable fold column
