@@ -53,9 +53,7 @@ opt.undofile = true
 
 -- misc
 -- opt.guicursor = ""
--- opt.isfname:append("@-@")
+opt.isfname:append("@-@")
 opt.signcolumn = "yes"
 opt.updatetime = 50
 opt.wrap = false
-
-vim.diagnostic.config({ virtual_lines = { only_current_line = true } })
