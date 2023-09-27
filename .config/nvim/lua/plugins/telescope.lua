@@ -31,8 +31,8 @@ return {
 		defaults = {
 			file_ignore_patterns = { ".git/", "node_modules" },
 			layout_config = {
-				--height = 0.90,
-				--width = 0.90,
+				height = 0.40,
+				width = 0.70,
 				--preview_cutoff = 0,
 				--horizontal = { preview_width = 0.60 },
 				--vertical = { width = 0.55, height = 0.9, preview_cutoff = 0 },
@@ -165,6 +165,7 @@ return {
 				"<cmd> Telescope command_palette<cr>",
 				{ silent = true, desc = "Telescope command_palette" },
 			},
+
 		}
 	end,
 }
