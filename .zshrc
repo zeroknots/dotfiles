@@ -117,4 +117,7 @@ eval "$(zoxide init zsh)"
 
 # bit
 export PATH="$PATH:/Users/ops/bin"
+export FZF_TMUX_OPTS="-p 55%,60%"
+
+
 # bit end
