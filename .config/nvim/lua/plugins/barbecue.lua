@@ -5,7 +5,7 @@ return {
 		"SmiteshP/nvim-navic",
 		"nvim-tree/nvim-web-devicons",
 	},
-	---@type barbecue.Config
+	-- @type barbecue.Config
 	opts = {
 		theme = "catppuccin",
 	},
