@@ -79,4 +79,18 @@ return {
 			},
 		},
 	},
+	keys = {
+		{ "<leader>fs", "<cmd>Neotree<cr>", { silent = true, desc = "Neotree Toggle" } },
+		{
+			"\\",
+			"<cmd>Neotree toggle reveal_force_cwd<cr>",
+			{ silent = true, desc = "Neotree Toggle reveal_force_cwd" },
+		},
+		{ "<leader>\\b", "<cmd>Neotree source=buffers toggle<cr>", { silent = true, desc = "Neotree buffers toggle" } },
+		{
+			"<leader>\\g",
+			"<cmd>Neotree source=git_status toggle<cr>",
+			{ silent = true, desc = "Neotree git status toggle" },
+		},
+	},
 }
