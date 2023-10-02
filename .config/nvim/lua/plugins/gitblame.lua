@@ -1,13 +1,16 @@
 vim.cmd("let g:gitblame_enabled = 0")
 return {
 	"f-person/git-blame.nvim",
-	lazy = true,
+	event = {
+		"BufReadPre",
+		"BufNewFile",
+	},
 	config = function(_, opts)
 		local gitblame = require("gitblame")
 		gitblame.setup(opts)
 	end,
 	opts = {
 		enabled = false,
-		lazy = true,
+		lazy = false,
 	},
 }

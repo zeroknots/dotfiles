@@ -1,5 +1,9 @@
 return {
 	"utilyre/barbecue.nvim",
+	event = {
+		"BufReadPre",
+		"BufNewFile",
+	},
 	name = "barbecue",
 	dependencies = {
 		"SmiteshP/nvim-navic",
@@ -7,6 +11,6 @@ return {
 	},
 	-- @type barbecue.Config
 	opts = {
-		theme = "catppuccin",
+		theme = "tokyonight",
 	},
 }

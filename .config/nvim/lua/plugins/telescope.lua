@@ -24,14 +24,15 @@ return {
 		-- telescope.load_extension("smart_goto")
 		telescope.load_extension("tailiscope")
 		telescope.load_extension("undo")
-		telescope.load_extension("zf-native")
+		-- telescope.load_extension("zf-native")
+		telescope.load_extension("smart_goto")
 	end,
 
 	opts = {
 		defaults = {
 			file_ignore_patterns = { ".git/", "node_modules" },
 			layout_config = {
-				height = 0.40,
+				height = 0.60,
 				width = 0.70,
 				--preview_cutoff = 0,
 				--horizontal = { preview_width = 0.60 },
@@ -57,7 +58,7 @@ return {
 		},
 		pickers = {
 			buffers = {
-				prompt_prefix = "󰸩 ",
+				prompt_prefix = "> ",
 			},
 			commands = {
 				prompt_prefix = " ",
@@ -74,7 +75,7 @@ return {
 				},
 			},
 			git_files = {
-				prompt_prefix = "󰊢 ",
+				prompt_prefix = "> ",
 				show_untracked = true,
 			},
 			find_files = {
@@ -82,12 +83,24 @@ return {
 				find_command = { "fd", "-H" },
 			},
 			live_grep = {
-				prompt_prefix = "󰱽 ",
+				prompt_prefix = " ",
 			},
 			grep_string = {
-				prompt_prefix = "󰱽 ",
+				prompt_prefix = " ",
 			},
 		},
+		-- file_sorter = require("telescope.sorters").get_fuzzy_file,
+		-- file_ignore_patterns = { "node_modules" },
+		-- -- generic_sorter = require("telescope.sorters").get_generic_fuzzy_sorter,
+		-- path_display = { "truncate" },
+		-- winblend = 0,
+		-- border = {},
+		-- borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
+		-- color_devicons = true,
+		-- set_env = { ["COLORTERM"] = "truecolor" }, -- default = nil,
+		-- -- file_previewer = require("telescope.previewers").vim_buffer_cat.new,
+		-- grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
+		-- qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
 		extensions = {
 			command_palette = {
 				{ "Open", { "Open File in GitHub", ":OpenInGHFile" } },
@@ -164,6 +177,11 @@ return {
 				"<leader>fc",
 				"<cmd> Telescope command_palette<cr>",
 				{ silent = true, desc = "Telescope command_palette" },
+			},
+			{
+				"<leader>p",
+				":Telescope smart_goto<cr>",
+				{ silent = true, desc = "telescope-smart-goto" },
 			},
 		}
 	end,

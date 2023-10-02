@@ -1,5 +1,6 @@
 return {
 	"TobinPalmer/rayso.nvim",
+	lazy = true,
 	cmd = "Rayso",
 	opts = {
 		base_url = "https://ray.so/", -- Default URL

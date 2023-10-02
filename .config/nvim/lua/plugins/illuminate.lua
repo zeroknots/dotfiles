@@ -1,7 +1,6 @@
 return {
-
 	"RRethy/vim-illuminate",
-	lazy = true,
+	lazy = false,
 	config = function(_, opts)
 		local plugin = require("illuminate")
 		plugin.configure(opts)
