@@ -12,14 +12,14 @@ key_bindings:
   - { key: J, mods: Command, chars: "\x01\x54" }
   - { key: Tab, mods: Control, chars: "\x01n" } # switch to next tmux window
   - { key: M, mods: Control, chars: "\x01m" } # switch to next tmux window
-  - { key: O, mods: Command|Shift, chars: "\x01o" } # open URLs 'joshmedeski/tmux-fzf-url'
+  - { key: O, mods: Command, chars: "\x01o" } # open URLs 'joshmedeski/tmux-fzf-url'
   - { key: T, mods: Command, chars: "\x01T" } # create a new tmux window
   - { key: W, mods: Command, chars: "\x01x" } # kill the current pane
   - { key: F, mods: Command, chars: "lf\n" } # open file manager 'gokcehan/lf'
   - { key: F, mods: Command|Shift, chars: "\x01\x5b\x2f" } # start tmux search mode
   - { key: J, mods: Command, chars: "\x01\x54" } # open t - tmux smart session manager
   - { key: O, mods: Command, chars: "\x01u" } # open URLs 'joshmedeski/tmux-fzf-url'
-  - { key: G, mods: Command, chars: "\x02g" } # open git manager 'jesseduffield/lazygit'
+  - { key: G, mods: Command, chars: "\x01g" } # open git manager 'jesseduffield/lazygit'
 
 env:
   TERM: xterm-256color
