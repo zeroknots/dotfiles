@@ -1,0 +1,36 @@
+add_newline = false
+command_timeout = 150
+
+[character]
+success_symbol = "[_](red)"
+error_symbol = "[_](gray)"
+vicmd_symbol = "[ ](purple)"
+
+[shell]
+
+
+[package]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[git_state]
+disabled=false
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = '[🍒 PICKING](bold red)'
+
+[git_branch]
+format = "on [$symbol$branch](bold purple) "
+
+[directory]
+truncate_to_repo = false
+truncation_length = 5
+read_only = " "
+truncation_symbol = "…/"
+
+[directory.substitutions]
+# "~/work/rhinestone/" = "@rs"
+"~/work/rhinestone/modulekitTest" = "@rs modulekit"
+"~/work/rhinestone/modules" = "@rs modules"
+"~/work/rhinestone/registry" = "@rs registry"
