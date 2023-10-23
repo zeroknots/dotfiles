@@ -11,6 +11,7 @@ return {
 		"telescope-all-recent.nvim",
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 		"ThePrimeagen/harpoon",
+		"ThePrimeagen/git-worktree.nvim",
 		"joshmedeski/telescope-smart-goto.nvim",
 		"piersolenski/telescope-import.nvim",
 	},
@@ -25,6 +26,7 @@ return {
 		telescope.load_extension("notify")
 		telescope.load_extension("tailiscope")
 		telescope.load_extension("undo")
+		telescope.load_extension("git_worktree")
 		telescope.load_extension("hop")
 		-- telescope.load_extension("zf-native")
 		telescope.load_extension("smart_goto")
