@@ -108,6 +108,7 @@ yabai -m rule --add app="^Finder$" manage=off grid=6:4:1:1:2:4
 yabai -m rule --add app="^WireGuard$" manage=off grid=6:4:1:1:2:4
 yabai -m rule --add app="^Docker$" manage=off grid=6:4:1:1:2:4
 yabai -m rule --add app="^Microsoft Excel$" manage=off grid=6:4:1:1:2:4
+yabai -m rule --add app="^Calendar$" manage=off 
 
 yabai -m rule --add app="^Any.do$" manage=off grid=6:4:1:1:2:4
 #yabai -m rule --add app="^Calendar$" manage=off grid=6:4:1:1:2:4

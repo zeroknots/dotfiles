@@ -3,4 +3,5 @@ config:
   show-name: true # show the window name with the icon
 
 icons:
-  zsh: "" # overwrite with your own symbol (Nerd Font icon, emoji, whatever!)
+  nvim: ""
+  fish: "" # overwrite with your own symbol (Nerd Font icon, emoji, whatever!)

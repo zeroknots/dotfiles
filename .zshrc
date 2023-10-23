@@ -144,5 +144,8 @@ _gt_yargs_completions()
 compdef _gt_yargs_completions gt
 ###-end-gt-completions-###
 
-export T_FZF_BORDER_LABEL='🌈 Tmux Sessions'
 
+
+# fnm
+export PATH="/Users/ops/Library/Application Support/fnm:$PATH"
+eval "`fnm env`"
