@@ -7,6 +7,8 @@ return {
 		"danielvolchek/tailiscope.nvim",
 		"debugloop/telescope-undo.nvim",
 		"natecraddock/telescope-zf-native.nvim",
+		"nvim-telescope/telescope-hop.nvim",
+		"telescope-all-recent.nvim",
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 		"ThePrimeagen/harpoon",
 		"joshmedeski/telescope-smart-goto.nvim",
@@ -20,10 +22,10 @@ return {
 		telescope.load_extension("fzf")
 		telescope.load_extension("import")
 		telescope.load_extension("neoclip")
-		-- telescope.load_extension("notify")
-		-- telescope.load_extension("smart_goto")
+		telescope.load_extension("notify")
 		telescope.load_extension("tailiscope")
 		telescope.load_extension("undo")
+		telescope.load_extension("hop")
 		-- telescope.load_extension("zf-native")
 		telescope.load_extension("smart_goto")
 	end,
@@ -32,8 +34,13 @@ return {
 		defaults = {
 			file_ignore_patterns = { ".git/", "node_modules" },
 			layout_config = {
-				height = 0.60,
+				height = 0.70,
 				width = 0.70,
+				preview_cutoff = 0,
+				horizontal = { preview_width = 0.60 },
+				vertical = { width = 0.55, height = 0.9, preview_cutoff = 0 },
+				prompt_position = "top",
+
 				--preview_cutoff = 0,
 				--horizontal = { preview_width = 0.60 },
 				--vertical = { width = 0.55, height = 0.9, preview_cutoff = 0 },

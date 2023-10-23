@@ -1,6 +1,8 @@
 .aws/credentials
 .azure
 .basement
+t
+d
 .config/fish/fish_variables
 .config/fish/functions/fzf_key_bindings.fish
 .config/karabiner/

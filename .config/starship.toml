@@ -2,8 +2,8 @@ add_newline = false
 command_timeout = 150
 
 [character]
-success_symbol = "[_](red)"
-error_symbol = "[_](gray)"
+success_symbol = "[_](gray)"
+error_symbol = "[_](red)"
 vicmd_symbol = "[ ](purple)"
 
 [shell]
@@ -30,7 +30,8 @@ read_only = " "
 truncation_symbol = "…/"
 
 [directory.substitutions]
-# "~/work/rhinestone/" = "@rs"
-"~/work/rhinestone/modulekitTest" = "@rs modulekit"
+"~/work/rhinestone/modulekit" = "@rs modulekit"
 "~/work/rhinestone/modules" = "@rs modules"
 "~/work/rhinestone/registry" = "@rs registry"
+"~/.config" = "dotfiles"
+"~/dotfiles/.config" = "dotfiles"
