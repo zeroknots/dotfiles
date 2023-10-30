@@ -3,4 +3,3 @@ touch .t
 chmod +x .t
 echo -e '#!/usr/bin/env bash\n' > .t 
 echo -e "nvim -c 'Telescope find_files'" >> .t
-echo .t >> .gitignore

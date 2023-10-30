@@ -4,4 +4,4 @@ config:
 
 icons:
   nvim: ""
-  fish: "" # overwrite with your own symbol (Nerd Font icon, emoji, whatever!)
+  fish: "*" # overwrite with your own symbol (Nerd Font icon, emoji, whatever!)

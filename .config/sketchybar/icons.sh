@@ -1,10 +1,10 @@
 #!/usr/bin/env sh
 
 # General Icons
-export LOADING=􀖇
-export APPLE=􀣺
-export PREFERENCES=􀺽
-export ACTIVITY=􀒓
+export LOADING=
+export APPLE=
+export PREFERENCES=
+export ACTIVITY=
 export LOCK=􀒳
 export LOGOUT=
 export POWER=

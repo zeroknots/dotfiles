@@ -1,7 +1,11 @@
 return {
 	"nvim-treesitter/nvim-treesitter-context",
 	event = { "BufReadPost", "BufNewFile" },
-	dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-treesitter/nvim-treesitter-textobjects" },
+	dependencies = {
+		"nvim-treesitter/nvim-treesitter",
+		"nvim-treesitter/nvim-treesitter-textobjects",
+		"nvim-treesitter/playground",
+	},
 	opts = {
 		enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
 		max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.

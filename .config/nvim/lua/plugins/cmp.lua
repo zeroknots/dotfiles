@@ -18,7 +18,9 @@ return {
 
 		-- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
 		require("luasnip.loaders.from_vscode").lazy_load()
-		require("luasnip.loaders.from_snipmate").lazy_load()
+		require("luasnip.loaders.from_snipmate").lazy_load({ paths = {
+			"./sippets",
+		} })
 
 		cmp.setup({
 			completion = {
@@ -48,8 +50,31 @@ return {
 			-- configure lspkind for vs-code like pictograms in completion menu
 			formatting = {
 				format = lspkind.cmp_format({
+					mode = "symbol",
 					maxwidth = 50,
 					ellipsis_char = "...",
+					symbol_map = {
+						Text = "",
+						Method = "ƒ",
+						Function = "",
+						Constructor = "",
+						Variable = "",
+						Class = "",
+						Interface = "ﰮ",
+						Module = "",
+						Property = "",
+						Unit = "",
+						Value = "",
+						Enum = "了",
+						Keyword = "",
+						Snippet = " ",
+						Color = "",
+						File = "",
+						Folder = "",
+						EnumMember = "",
+						Constant = "",
+						Struct = "",
+					},
 				}),
 			},
 		})

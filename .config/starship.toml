@@ -1,3 +1,10 @@
+format = """
+$character\
+$directory\
+$git_branch\
+$git_status\
+"""
+
 add_newline = false
 command_timeout = 150
 
@@ -15,19 +22,27 @@ disabled = true
 [nodejs]
 disabled = true
 
+
+[git_branch]
+symbol = ""
+format = '[$symbol $branch]($style)'
+
+[git_status]
+format = ' [$all_status$ahead_behind]($style) '
+
 [git_state]
 disabled=false
 format = '[\($state( $progress_current of $progress_total)\)]($style) '
 cherry_pick = '[🍒 PICKING](bold red)'
 
-[git_branch]
-format = "on [$symbol$branch](bold purple) "
 
 [directory]
 truncate_to_repo = false
+style="blue"
 truncation_length = 5
 read_only = " "
 truncation_symbol = "…/"
+
 
 [directory.substitutions]
 "~/work/rhinestone/modulekit" = "@rs modulekit"

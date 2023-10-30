@@ -20,6 +20,7 @@ key_bindings:
   - { key: N, mods: Command, chars: "\x01n" } # create a new tmux window
   - { key: C, mods: Command, chars: "\x01c" } # create a new tmux window
   - { key: Semicolon, mods: Command, chars: "\x01n" } # create a new tmux window
+  - { key: Semicolon, mods: Control, chars: "\x01n" } # create a new tmux window
   - { key: W, mods: Command, chars: "\x01x" } # kill the current pane
     #- { key: F, mods: Command, chars: "lf\n" } # open file manager 'gokcehan/lf'
     #- { key: F, mods: Command|Shift, chars: "\x01\x5b\x2f" } # start tmux search mode
