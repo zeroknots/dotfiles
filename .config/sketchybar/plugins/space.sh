@@ -1,28 +1,28 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 update() {
-if [ "$SELECTED" = "true" ]; then
-  sketchybar -m --set $NAME label.highlight=on icon.highlight=on background.drawing=on
-else
-  sketchybar -m --set $NAME label.highlight=off icon.highlight=off background.drawing=off
-fi
+  source "$CONFIG_DIR/colors.sh"
+  COLOR=$BACKGROUND_2
+  if [ "$SELECTED" = "true" ]; then
+    COLOR=$GREY
+  fi
+  sketchybar --set $NAME icon.highlight=$SELECTED \
+                         label.highlight=$SELECTED \
+                         background.border_color=$COLOR
 }
 
-mouse_entered() {
-  sketchybar -m --set $NAME icon.highlight=on \
-                            label.highlight=on
-}
-
-mouse_exited() {
-  sketchybar -m --set $NAME icon.highlight=off \
-                            label.highlight=off
+mouse_clicked() {
+  if [ "$BUTTON" = "right" ]; then
+    yabai -m space --destroy $SID
+    sketchybar --trigger windows_on_spaces --trigger space_change
+  else
+    yabai -m space --focus $SID 2>/dev/null
+  fi
 }
 
 case "$SENDER" in
-  "mouse.entered") mouse_entered
+  "mouse.clicked") mouse_clicked
   ;;
-  "mouse.exited") mouse_exited
-  ;;
-  *) update 
+  *) update
   ;;
 esac

@@ -14,6 +14,7 @@ key_bindings:
   - { key: O, mods: Command, chars: "\x01o" } # open URLs 'joshmedeski/tmux-fzf-url'
   - { key: P, mods: Command, chars: ":GoToFile\n" } # go to file
   - { key: P, mods: Control, chars: ":GoToFile\n" } # go to file
+  - { key: I, mods: Control, chars: ":Telescope smart_goto\n" } # go to file
   - { key: T, mods: Command, chars: "\x01T" } # create a new tmux window
   - { key: S, mods: Command, chars: "\x1b\x3a\x77\x0a" } # save vim buffer
   - { key: Q, mods: Command, chars: ":q\n" } # quit vim
@@ -27,6 +28,11 @@ key_bindings:
   - { key: J, mods: Command, chars: "\x01\x54" } # open t - tmux smart session manager
   - { key: O, mods: Command, chars: "\x01u" } # open URLs 'joshmedeski/tmux-fzf-url'
   - { key: G, mods: Command, chars: "\x01g" } # open git manager 'jesseduffield/lazygit'
+  - { key: Key1, mods: Control, chars: "\x011" } # open git manager 'jesseduffield/lazygit'
+  - { key: Key2, mods: Control, chars: "\x012" } # open git manager 'jesseduffield/lazygit'
+  - { key: Key3, mods: Control, chars: "\x013" } # open git manager 'jesseduffield/lazygit'
+  - { key: Key4, mods: Control, chars: "\x014" } # open git manager 'jesseduffield/lazygit'
+  - { key: Key5, mods: Control, chars: "\x015" } # open git manager 'jesseduffield/lazygit'
 
 env:
   TERM: xterm-256color
@@ -103,6 +109,7 @@ window:
 #
 font:
   normal:
+    #family: JetBrains Mono
     family: Hack Nerd Font
   size: 13
 #

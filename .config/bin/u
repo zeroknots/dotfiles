@@ -37,24 +37,14 @@ gum spin --spinner globe --title "🍻 brew updating" --show-output -- brew upda
 echo "\n" >>/tmp/u-$NOW.txt
 echo "✅ 🍻 brew updated"
 
-set -l OUTDATED (brew outdated)
-echo $OUTDATED >>/tmp/u-$NOW.txt
 
-if test -n "$OUTDATED"
-    gum spin --spinner globe --title "🍻 brew upgrading" --show-output -- brew upgrade >>/tmp/u-$NOW.txt
-    echo "\n" >>/tmp/u-$NOW.txt
-    echo "✅ 🍻 brew upgraded"
+gum spin --spinner globe --title "🍻 brew upgrading" --show-output -- brew upgrade >>/tmp/u-$NOW.txt
+echo "\n" >>/tmp/u-$NOW.txt
+echo "✅ 🍻 brew upgraded"
 
-    gum spin --spinner globe --title "🍻 brew cleaning up" --show-output -- brew cleanup --prune=all >>/tmp/u-$NOW.txt
-    echo "\n" >>/tmp/u-$NOW.txt
-    echo "✅ 🍻 brew cleaned up"
-else
-    echo "No outdated brew packages" >>/tmp/u-$NOW.txt
-end
+gum spin --spinner globe --title "🍻 brew cleaning up" --show-output -- brew cleanup --prune=all >>/tmp/u-$NOW.txt
+echo "\n" >>/tmp/u-$NOW.txt
+echo "✅ 🍻 brew cleaned up"
 
 gum spin --spinner globe --title "🍻 brew doctoring" --show-output -- brew doctor >>/tmp/u-$NOW.txt
-echo "\n" >>/tmp/u-$NOW.txt
-echo "✅ 🍻 brew doctored"
 
-echo "✅ 🧾 logged to /tmp/u-$NOW.txt"
-man /tmp/u-$NOW.txt

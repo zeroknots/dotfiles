@@ -5,8 +5,10 @@
 #include <stdbool.h>
 #include <time.h>
 
-static const char TOPPROC[32] = { "/bin/ps -Aceo pid,pcpu,comm -r" }; 
-static const char FILTER_PATTERN[16] = { "com.apple." };
+#define MAX_TOPPROC_LEN 28
+
+static const char TOPPROC[] = { "/bin/ps -Aceo pid,pcpu,comm -r" }; 
+static const char FILTER_PATTERN[] = { "com.apple." };
 
 struct cpu {
   host_t host;
@@ -69,7 +71,7 @@ static inline void cpu_update(struct cpu* cpu) {
     fgets(line, sizeof(line), file);
 
     char* start = strstr(line, FILTER_PATTERN);
-    char topproc[32];
+    char topproc[MAX_TOPPROC_LEN + 4];
     uint32_t caret = 0;
     for (int i = 0; i < sizeof(line); i++) {
       if (start && i == start - line) {
@@ -77,16 +79,16 @@ static inline void cpu_update(struct cpu* cpu) {
         continue;
       }
 
-      if (caret >= 28 && caret <= 30) {
+      if (caret >= MAX_TOPPROC_LEN && caret <= MAX_TOPPROC_LEN + 2) {
         topproc[caret++] = '.';
         continue;
       }
-      if (caret > 30) break;
+      if (caret > MAX_TOPPROC_LEN + 2) break;
       topproc[caret++] = line[i];
       if (line[i] == '\0') break;
     }
 
-    topproc[31] = '\0';
+    topproc[MAX_TOPPROC_LEN + 3] = '\0';
 
     pclose(file);
 
@@ -94,24 +96,22 @@ static inline void cpu_update(struct cpu* cpu) {
     if (total_perc >= .7) {
       snprintf(color, 16, "%s", getenv("RED"));
     } else if (total_perc >= .3) {
-      snprintf(color, 16, "%s", getenv("PEACH"));
+      snprintf(color, 16, "%s", getenv("ORANGE"));
     } else if (total_perc >= .1) {
       snprintf(color, 16, "%s", getenv("YELLOW"));
     } else {
       snprintf(color, 16, "%s", getenv("LABEL_COLOR"));
     }
 
-    snprintf(cpu->command, 256, 
-                                // "--push cpu.sys %.2f "
-                                // "--push cpu.user %.2f "
+    snprintf(cpu->command, 256, "--push cpu.sys %.2f "
+                                "--push cpu.user %.2f "
+                                "--set cpu.top label='%s' "
                                 "--set cpu.percent label=%.0f%% label.color=%s ",
-                                // "--set cpu.top label=\"%s\"",
-                                // sys_perc,
-                                // user_perc,
+                                sys_perc,
+                                user_perc,
+                                topproc,
                                 total_perc*100.,
-                                color
-                                // topproc
-             );
+                                color          );
   }
   else {
     snprintf(cpu->command, 256, "");

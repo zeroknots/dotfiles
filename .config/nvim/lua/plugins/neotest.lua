@@ -4,10 +4,23 @@ return {
 		"llllvvuu/neotest-foundry",
 		"nvim-lua/plenary.nvim",
 		"nvim-treesitter/nvim-treesitter",
+		"antoinemadec/FixCursorHold.nvim",
 	},
-	config = {
+	config = function(_, opts)
+		require("neotest").setup(opts)
+	end,
+	opts = {
 		adapters = {
-			--require("neotest-plenatry"),
+			require("neotest-plenary"),
+			require("neotest-foundry"),
+		},
+	},
+
+	keys = {
+		{
+			"<leader>mt",
+			'<cmd>lua require("neotest").run.run(vim.fn.expand("%"))<cr>',
+			{ silent = true, desc = "Neotest run" },
 		},
 	},
 }

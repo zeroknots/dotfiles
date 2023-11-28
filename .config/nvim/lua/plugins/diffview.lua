@@ -5,6 +5,14 @@ return {
 		local diffview = require("diffview")
 		diffview.setup(opts)
 	end,
+	cmd = {
+		"DiffviewOpen",
+		"DiffviewClose",
+		"DiffviewToggleFiles",
+		"DiffviewFocusFiles",
+		"DiffviewRefresh",
+		"DiffviewFileHistory",
+	},
 	opts = {
 		view = {
 			-- Configure the layout and behavior of different types of views.
